@@ -1,0 +1,507 @@
+*
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  background-color: #621402;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.container
+{
+  max-width: 1170px;
+  margin: auto;
+  width: 95%;
+}
+
+.navbar
+{
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.nav
+{
+  position: relative;
+}
+.mobile-menu
+{
+  display: none;
+}
+.header
+{
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #991e03 85.62%), url("/images/bg.jpg") no-repeat center top / cover;
+}
+
+.menu 
+{
+  display: flex;
+  margin: 0;
+  padding-left: 57px;
+}
+
+.menu-link
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item
+{
+  list-style-type: none;
+  margin-right: 25px;
+}
+
+.user
+{
+  margin:auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.avatar
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 11px;
+}
+
+.film
+{
+  display: flex;
+  align-items: center;
+}
+
+.film-title-small
+{
+  opacity: 0.5;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.film-title
+{
+  margin-top: 11px;
+  margin-bottom: 23px;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.film-description
+{
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.film-details
+{
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.film-time
+{
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.time-icon
+{
+  margin-right: 14px;
+}
+
+.rating-icon
+{
+  margin-right: 12px;
+}
+
+.time-counter
+{
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.rating-current
+{
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.film-trailer
+{
+  margin: auto;
+}
+ 
+.session
+{
+  display: flex;
+  align-items: flex-start;
+
+  padding-top: 46px;
+  padding-bottom: 64px;
+  margin-top: 69px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.session-date
+{
+  margin-right: 95px;
+}
+
+.session-date-block
+{
+  display: flex;
+  margin-top: 20px;
+}
+
+.session-date-item
+{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-right: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.session-date-item:hover,
+.session-active
+{
+  background-color: #FE8E05;
+  color: #621402;
+}
+
+.session-month
+{
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.session-day
+{
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.session-week
+{
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.session-cinema
+{
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.session-time
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.session-select-cinema
+{
+  width: 470px;
+}
+
+select
+{
+  padding: 18px;
+  margin-top: 33px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: #fff;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+option
+{
+  color: black;
+}
+
+.scheme
+{
+  margin-bottom: 30px;
+  background: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;  
+}
+
+.scheme-svg
+{
+  max-width: 1170px;
+}
+
+.scheme path:not(.light)
+{
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+.scheme path:not(.light):hover
+{
+  fill: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.scheme path.booked,
+.scheme path.booked:hover
+{
+  fill: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+
+.scheme path.active,
+.scheme path.active:hover
+{
+  fill: #FE8E05;
+}
+
+.legend
+{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  max-width: 1018px;
+  width: 90%;
+  margin: auto;
+  padding-top: 22px;
+  padding-bottom: 38px;
+}
+
+.legend-booked,
+.legend-booked:hover
+{
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.legend-label
+{
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legend-label svg
+{
+  margin-right: 15px;
+}
+
+.price
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price-label
+{
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.price-total,
+.ruble
+{
+  font-size: 52px;
+  line-height: 61px;
+}
+
+.button-pay
+{
+  display: block;
+  padding: 24px 52px;
+  background: #FE8E05;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@media (max-width: 1200px)
+{
+  .container
+  {
+    max-width: 960px;
+  }
+
+  .session-select-cinema
+  {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px)
+{
+  .container
+  {
+    max-width: 750px;
+  }
+  .session
+  {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .session-date
+  {
+    margin-bottom: 40px;
+  }
+  .session-cinema
+  {
+    order: 3;
+  }
+  .menu-item
+  {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 768px)
+{
+  .container
+  {
+    max-width: 560px;
+  }
+  .menu
+  {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    padding: 20px;
+    margin-left: 20px;
+    z-index: 9;
+    flex-direction: column;
+    background: #621402;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10%);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .menu-open
+  {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .menu-item:not(:last-child)
+  {
+    margin-bottom: 10px;
+  }
+  .mobile-menu
+  {
+    display: block;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  .film
+  {
+    flex-direction: column;
+  }
+  .film-trailer
+  {
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .session-date
+  {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 520px)
+{
+  .legend
+  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .legend-label
+  {
+    margin-top: 10px;
+  }
+  .session-date-item
+  {
+    width: 90px;
+    height: 90px;
+  }
+  .price
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-pay
+  {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+}
+
+@media (max-width: 440px)
+{
+  .session-cinema
+  {
+    display: block;
+    margin-top: 33px;
+  }
+  .session-date-item
+  {
+    width: 72px;
+    height: 80px;
+  }
+  .session-day
+  {
+    font-size: 25px;
+  }
+  .session-week
+  {
+    display: none;
+  }
+  .price-total
+  {
+    font-size: 30px;
+  }
+  .ruble
+  {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 380px)
+{
+  .session-date
+  {
+    width: 100%;
+  }
+  .session-date-item
+  {
+    margin: auto;
+  }
+}
